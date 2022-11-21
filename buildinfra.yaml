@@ -1,0 +1,7 @@
+---
+- name: building infra for cicd
+  roles:
+    - tomcat
+  hosts: "{{ env }}"
+  vars_files:
+    - ./vars/myvars.yaml

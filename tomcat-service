@@ -1,0 +1,14 @@
+[Unit]
+Description=Tomcat service
+
+[Service]
+User=root               >>we can give any user as per our requirement  like jenkins user tomcat user(create a user and run it) but i am here i am taking root bcz root user
+ExecStart=/opt/tomcat/bin/catalina.sh run
+TimeoutSec=30
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=350
+StartLimitBurst=10
+
+[Install]
+WantedBy=multi-user.target
