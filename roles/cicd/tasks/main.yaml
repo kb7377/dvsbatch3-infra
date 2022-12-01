@@ -1,0 +1,12 @@
+---
+- name: Download the artifact
+  maven_artifact:
+    group_id: in.shan5a6
+    artifact_id: myweb
+    repository_url: 'http://3.82.57.13/repository/app1-artifactory'
+    extension: war
+    version: "{{ artifact_version }}"
+    username: "{{ nexus_user }}"
+    password: "{{ nexus_password }}"
+    dest: /opt/tomcat/webapps/
+
